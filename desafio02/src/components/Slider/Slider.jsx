@@ -1,32 +1,10 @@
 import { useEffect, useState } from 'react'
 import styles from '../slider.module.css'
-import xlow from '../../assets/xlow-branco.png'
 import Arrow from '../Arrow/Arrow'
 
-const images = [
-  {
-    url: xlow,
-    alt: 'Image 1',
-    link: '#',
-  },
-  {
-    url: xlow,
-    alt: 'Image 2',
-    link: '#',
-  },
-  {
-    url: xlow,
-    alt: 'Image 3',
-    link: '#',
-  },
-  {
-    url: xlow,
-    alt: 'Image 4',
-    link: '#',
-  },
-]
 
-const Slider = () => {
+
+const Slider = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
