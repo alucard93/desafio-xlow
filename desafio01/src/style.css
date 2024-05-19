@@ -27,6 +27,20 @@ figure {
   box-sizing: border-box;
   font-family: 'Barlow', sans-serif;
 }
+body {
+  background: #f2f2f2;
+}
+
+.container-banner-main {
+  width: 100%;
+}
+
+.image-banner-main {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  margin: 0 auto;
+}
 
 .container-btngrid-mobile,
 .container-btngrid {
@@ -54,6 +68,7 @@ figure {
   height: 40px;
   cursor: pointer;
   border: 1px solid transparent;
+  mix-blend-mode: darken;
 }
 
 .img-sku:hover {
@@ -93,6 +108,9 @@ figure {
   margin: 0 auto;
 
   max-width: 200px;
+  padding: 0 16px 16px;
+  background: #fff;
+  border-radius: 4px;
 }
 
 .sku-images-container {
@@ -153,6 +171,7 @@ figure {
   max-width: 100%;
   object-fit: cover;
   display: block;
+  mix-blend-mode: darken;
 }
 
 .title-product-name {
