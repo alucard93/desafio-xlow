@@ -29,22 +29,20 @@ const Slider = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      goToNext()
-    }, 3000) // Change image every 3 seconds
+      handleNext()
+    }, 5000)
     return () => clearInterval(interval)
   }, [currentIndex])
 
-  const goToPrevious = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
-    )
+  const handleNext = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length)
   }
 
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length)
+  const handlePrevious = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length)
   }
 
-  const goToSlide = (index) => {
+  const setCurrentSlide = (index) => {
     setCurrentIndex(index)
   }
 
@@ -68,13 +66,13 @@ const Slider = () => {
       </div>
       <button
         className={`${styles.arrow} ${styles.leftArrow}`}
-        onClick={goToPrevious}
+        onClick={handlePrevious}
       >
         &lt;
       </button>
       <button
         className={`${styles.arrow} ${styles.rightArrow}`}
-        onClick={goToNext}
+        onClick={handleNext}
       >
         &gt;
       </button>
@@ -85,7 +83,7 @@ const Slider = () => {
             className={`${styles.dot} ${
               index === currentIndex ? styles.active : ''
             }`}
-            onClick={() => goToSlide(index)}
+            onClick={() => setCurrentSlide(index)}
           />
         ))}
       </div>
