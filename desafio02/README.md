@@ -18,7 +18,8 @@ Projeto desenvolvido para o desafio técnico da empresa Xlow.
 
 ```sh
 git clone https://github.com/alucard93/desafio-xlow.git
-cd nome-do-seu-projeto
+cd desafio02
+
 Instale as dependências:
 
 yarn install
