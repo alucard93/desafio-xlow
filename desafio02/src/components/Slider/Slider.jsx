@@ -1,24 +1,26 @@
-import { useState, useEffect } from 'react'
-import styles from './slider.module.css'
+import { useEffect, useState } from 'react'
+import styles from '../slider.module.css'
+import xlow from '../../assets/xlow-branco.png'
+import Arrow from '../Arrow/Arrow'
 
 const images = [
   {
-    url: 'https://via.placeholder.com/800x400?text=Image+1',
+    url: xlow,
     alt: 'Image 1',
     link: '#',
   },
   {
-    url: 'https://via.placeholder.com/800x400?text=Image+2',
+    url: xlow,
     alt: 'Image 2',
     link: '#',
   },
   {
-    url: 'https://via.placeholder.com/800x400?text=Image+3',
+    url: xlow,
     alt: 'Image 3',
     link: '#',
   },
   {
-    url: 'https://via.placeholder.com/800x400?text=Image+4',
+    url: xlow,
     alt: 'Image 4',
     link: '#',
   },
@@ -59,22 +61,22 @@ const Slider = () => {
             className={`${styles.slide} ${
               index === currentIndex ? styles.active : ''
             }`}
-            style={{ backgroundImage: `url(${image.url})` }}
-            alt={image.alt}
-          />
+          >
+            <img src={image.url} alt={image.alt} className={styles.image} />
+          </a>
         ))}
       </div>
       <button
         className={`${styles.arrow} ${styles.leftArrow}`}
         onClick={handlePrevious}
       >
-        &lt;
+        <Arrow />
       </button>
       <button
         className={`${styles.arrow} ${styles.rightArrow}`}
         onClick={handleNext}
       >
-        &gt;
+        <Arrow className={styles.arrowIcon} />
       </button>
       <div className={styles.dots}>
         {images.map((_, index) => (

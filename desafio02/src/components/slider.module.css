@@ -1,25 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .slider {
   position: relative;
   width: 100%;
   height: 400px;
   margin: auto;
   overflow: hidden;
+  background: #000;
+}
+
+.image {
+  display: block;
+
+  max-width: 100%;
+  object-fit: cover;
 }
 
 .sliderWrapper {
   display: flex;
+  height: 100%;
   transition: transform 0.5s ease;
 }
 
 .slide {
   min-width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
-.slide.active {
-  display: block;
+  display: flex;
+  align-items: center;
 }
 
 .arrow {
@@ -36,10 +46,15 @@
 
 .leftArrow {
   left: 10px;
+  
 }
 
 .rightArrow {
   right: 10px;
+}
+
+.arrowIcon {
+  rotate: 180deg;
 }
 
 .dots {
@@ -51,15 +66,15 @@
 
 .dot {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   margin: 0 5px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #6d6d6d;
   border: none;
   border-radius: 50%;
   cursor: pointer;
 }
 
 .dot.active {
-  background-color: white;
+  background-color: #2b3278;
 }
