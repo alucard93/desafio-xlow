@@ -1,8 +1,31 @@
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+amarkdown
 
-Currently, two official plugins are available:
+# Desafio Xlow
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Projeto desenvolvido para o desafio técnico da empresa Xlow.
+
+## Requisitos
+
+- Node.js (versão 16.0.1 ou superior)
+- Yarn (versão 1.22.19 ou superior)
+
+## Instalação
+
+1. Clone o repositório:
+
+```sh
+git clone https://github.com/alucard93/desafio-xlow.git
+cd nome-do-seu-projeto
+Instale as dependências:
+
+yarn install
+
+Rodar o Projeto
+Para iniciar o servidor de desenvolvimento, execute:
+
+yarn dev
+
+O projeto estará disponível em http://localhost:3000.
